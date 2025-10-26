@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog — Matemática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">Matemática</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Acerca</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                <li><a class="dropdown-item" href="#">Álgebra</a></li>
+                <li><a class="dropdown-item" href="#">Geometría</a></li>
+                <li><a class="dropdown-item" href="#">Cálculo</a></li>
+                <li><a class="dropdown-item" href="#">Teoría de Números</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="d-flex" role="search" onsubmit="event.preventDefault(); /* implementar búsqueda */">
+            <input class="form-control me-2" type="search" placeholder="Buscar en el blog" aria-label="Buscar">
+            <button class="btn btn-light" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido principal: página única del blog -->
+    <main class="container my-5">
+      <article class="mx-auto" style="max-width:900px;">
+        <header class="mb-4">
+          <h1 class="fw-bold">Prueba de Hipótesis y Confiabilidad</h1>
+          <p class="text-muted mb-0">Publicado el 20 de octubre de 2025 · <span class="badge bg-secondary">Cálculo</span></p>
+          <hr class="mt-3">
+        </header>
+
+        <section class="mb-4">
+          <p>El tema de Prueba de Hipótesis y Confiabilidad constituye la base de la Inferencia Estadística, un campo esencial en la investigación que permite a los científicos tomar conclusiones sobre una población a partir de los datos recolectados de una muestra.</p>
+          <ul class="mb-3">
+            <li>La Prueba de Hipótesis es un procedimiento estadístico formal para decidir si una suposición específica sobre un parámetro poblacional (la hipótesis nula, $H_0$) puede ser rechazada con base en la evidencia de la muestra, favoreciendo una hipótesis alternativa ($H_1$).</li>
+            <li>La Confiabilidad es una cualidad fundamental que asegura la calidad de los datos de la muestra, refiriéndose a la consistencia y estabilidad de los resultados obtenidos por un instrumento de medición.</li>
+          </ul>
+          <p>Ambos conceptos son cruciales, ya que garantizan que las conclusiones científicas se basen en datos sólidos y análisis rigurosos.</p>
+          <br>
+
+          <h2>Importancia de la Prueba de Hipótesis en la Toma de Decisiones Científicas</h2>
+          <p>La Prueba de Hipótesis es de vital importancia en la ciencia porque proporciona un marco objetivo y cuantitativo para evaluar teorías y afirmaciones, permitiendo a los investigadores:</p>
+          <ul class="mb-3">
+            <li>Validar o Refutar Teorías: Transforma una suposición o pregunta de investigación en un par de hipótesis estadísticas ($H_0$ y $H_1$) que pueden ser sometidas a pruebas empíricas rigurosas. Esto ayuda a avanzar el conocimiento científico al confirmar, modificar o refutar ideas iniciales.</li>
+            <li>Tomar Decisiones Basadas en Evidencia: Permite a los investigadores tomar decisiones (rechazar o no rechazar $H_0$) utilizando un umbral de riesgo conocido, el nivel de significancia ($\alpha$). Esto asegura que las conclusiones no sean el resultado de la casualidad, sino que estén respaldadas por evidencia objetiva y sistemática.</li>
+            <li>Cuantificar la Incertidumbre (Valor $p$): El proceso resulta en un valor $p$, que representa la probabilidad de observar los datos muestrales si la hipótesis nula fuera cierta. Esto proporciona una forma estandarizada de comunicar la solidez de la evidencia contra la hipótesis nula a otros investigadores.</li>
+            <li>Reducir Errores: Ayuda a gestionar los riesgos inherentes al proceso de inferencia, como el Error Tipo I ($\alpha$, rechazar una $H_0$ verdadera) y el Error Tipo II ($\beta$, no rechazar una $H_0$ falsa), optimizando el diseño del estudio para obtener mayor Potencia.</li>
+          </ul>
+
+          <br>
+          <h2>Relevancia de la Confiabilidad en la Calidad de los Instrumentos de Investigación</h2>
+          <p>La confiabilidad es la piedra angular de la calidad de cualquier estudio, ya que se refiere al grado en que un instrumento de investigación produce resultados consistentes y coherentes cada vez que se aplica bajo condiciones similares. Su relevancia se manifiesta en:</p>
+          <ul class="mb-3">
+            <li>Garantía de Consistencia (Replicabilidad): Un instrumento confiable asegura que la variación en los resultados se debe a cambios en la variable que se mide y no a fallas o inconsistencias del instrumento. Esto es fundamental para que otros investigadores puedan replicar el estudio y obtener conclusiones similares, un principio básico de la ciencia.</li>
+            <p>Ejemplo: Un termómetro confiable debe marcar la misma temperatura cada vez que se introduce en el mismo vaso de agua.</p>
+            <li>Reducción de la Varianza de Error: La confiabilidad está directamente asociada a la minimización del error de medición. Un instrumento no confiable introduce un "ruido" o varianza de error que puede oscurecer el verdadero efecto o relación que se está tratando de medir.</li>
+            <li>Condición Necesaria para la Validez: Un instrumento no puede ser válido (medir lo que pretende medir) si no es confiable (si no produce resultados consistentes). Si los resultados son inconsistentes, no pueden ser un reflejo preciso del concepto de interés. La confiabilidad, por lo tanto, es una condición previa indispensable para establecer la validez.</li>
+            <li>Credibilidad de los Hallazgos: El uso de instrumentos con alta confiabilidad, verificada a través de métodos como el Alfa de Cronbach o el Test-Retest, incrementa la credibilidad científica de los datos y, por extensión, de las conclusiones de la investigación.</li>
+          </ul>
+
+          <br>
+          <hr class="mt-3">
+
+          <h2>Prueba de Hipótesis</h2>
+          <p>Es una herramienta estadística fundamental utilizada para tomar decisiones sobre un parámetro poblacional basándose en la información recolectada de una muestra.</p>
+          <p>La Prueba de Hipótesis es un procedimiento estandarizado que utiliza datos muestrales para determinar si hay suficiente evidencia para rechazar una afirmación inicial (hipótesis nula) sobre una característica de la población (como la media o la proporción).</p>
+          <ul>
+            <li>En esencia: Es un proceso formal para verificar si una suposición sobre la población es razonable a la luz de lo que se observa en los datos de una muestra.</li>
+          </ul>
+          <h4>Tipos de Hipótesis (Nula y Alternativa)</h4>
+          <p>Toda prueba de hipótesis se formula con dos afirmaciones mutuamente excluyentes:</p>
+          <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Hipotesis</th>
+                    <th scope="col">Símbolo</th>
+                    <th scope="col">Definición</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Hipótesis Nula</th>
+                    <td>$H_0$</td>
+                    <td>Es la afirmación inicial que se asume como verdadera (el statu quo). Siempre incluye un signo de igualdad ($=$, $\le$, $\ge$). Se busca evidencia en contra para poder rechazarla.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Hipótesis Alternativa</th>
+                    <td>$H_1$ o $H_a$</td>
+                    <td>Es la afirmación que se desea probar o la que se acepta si la $H_0$ es rechazada. Siempre incluye un signo de desigualdad ($\ne$, $<$, $>$).</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><strong>Tipos de Prueba (basados en $H_1$):</strong></p>
+        <ol>
+            <li>Bilateral (Dos colas): $H_1: \mu \ne \mu_0$ (diferente de).</li>
+            <li>Unilateral (Una cola a la derecha): $H_1: \mu > \mu_0$ (mayor que).</li>
+            <li>Unilateral (Una cola a la izquierda): $H_1: \mu < \mu_0$ (menor que).</li>
+        </ol>
+
+        <p><strong>Nivel de Significancia ($\alpha$) y Regiones de Rechazo</strong></p>
+        <p>El Nivel de Significancia ($\alpha$), también llamado el tamaño del Error Tipo I, es la probabilidad máxima que un investigador está dispuesto a aceptar de cometer el error de rechazar la $H_0$ cuando en realidad es verdadera.</p>
+        <ul>
+            <li>$\alpha$ se establece antes de la prueba. Los valores más comunes son 0.05 (5%) o 0.01 (1%).</li>
+            <li>Región de Rechazo (o Región Crítica): Es el área bajo la curva de la distribución muestral que contiene los valores del estadístico de prueba tan extremos (o más extremos) que, si caen allí, llevan a la decisión de rechazar la $H_0$. El tamaño de esta área es precisamente $\alpha$.</li>
+        </ul>
+
+        <p> <strong>Pasos del Procedimiento con Ejemplos</strong></p>
+        <p>El procedimiento se sigue de manera sistemática:</p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Paso</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Ejemplo para la Media (μ)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Formular Hipótesis</th>
+                    <td>Establecer la $H_0$ y la $H_1$.</td>
+                    <td>Un fabricante afirma que el tiempo de vida promedio de una bombilla es de 1000 horas. $H_0: \mu = 1000$ vs. $H_1: \mu \ne 1000$.</td>
+                </tr>
+                <tr>
+                    <th scope="row">Definir Nivel de Significancia</th>
+                    <td>Elegir el valor de $\alpha$.</td>
+                    <td>Se establece $\alpha = 0.05$ (5%).</td>
+                </tr>
+                <tr>
+                    <th scope="row">Determinar el Estadístico de Prueba</th>
+                    <td>Elegir la fórmula (Z, T, etc.) y calcular el valor muestral.</td>
+                    <td>Se elige Z (asumiendo $\sigma$ conocida o $n$ grande).</td>
+                </tr>
+                <tr>
+                    <th scope="row">Establecer la Regla de Decisión</th>
+                    <td>Definir los valores críticos o utilizar el valor $p$.</td>
+                    <td>Método del Valor Crítico: Para $\alpha=0.05$ (prueba bilateral Z), los valores críticos son $\pm 1.96$. Se rechaza $H_0$ si $</td>
+                </tr>
+                <tr>
+                    <th scope="row">Tomar la Decisión y Concluir</th>
+                    <td>Comparar el valor calculado con el valor crítico (o el valor $p$ con $\alpha$) y redactar la conclusión en el contexto del problema.</td>
+                    <td>Si $Z_{\text{calc}} = 2.5$, se rechaza $H_0$ porque $2.5 > 1.96$. La evidencia sugiere que el tiempo de vida promedio es diferente de 1000 horas.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Fórmulas Empleadas</strong></p>
+        <p>Las fórmulas del estadístico de prueba (valor calculado) se basan en la Distribución Normal Estándar ($Z$) o la Distribución t de Student ($t$).</p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Parámetro</th>
+              <th scope="col">Estadística de Prueba Z (Para n grande o σ conocida)</th>
+              <th scope="col">Estadística de Prueba t (Para n pequeña y σ desconocida)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Media ($\mu$)</th>
+              <td>$$Z = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}}$$</td>
+              <td>$$t = \frac{\bar{x} - \mu_0}{s/\sqrt{n}}$$</td>
+            </tr>
+            <tr>
+              <th scope="row">Proporción ($p$)</th>
+              <td>$$Z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}$$</td>
+              <td>No se usa t para proporción; se usa Z.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>Donde:</p>
+        <ul>
+          <li>$\bar{x}$ = Media muestral</li>
+          <li>$\mu_0$ = Media hipotética</li>
+          <li>$\sigma$ = Desviación estándar poblacional</li>
+          <li>$s$ = Desviación estándar muestral</li>
+          <li>$n$ = Tamaño de la muestra</li>
+          <li>$n$ = Tamaño de la muestra</li>
+          <li>$p_0$ = Proporción hipotética</li>
+        </ul>
+
+        <p><strong>Breve Desarrollo de un Ejercicio Numérico (Prueba Z para la Media)</strong></p>
+        <p>
+          <strong>Problema: </strong>Una empresa afirma que sus empleados trabajan en promedio 8 horas diarias ($\mu_0 = 8$). Una muestra aleatoria de 36 empleados ($n=36$) muestra una media de 7.5 horas ($\bar{x}=7.5$). Se sabe que la desviación estándar poblacional es de 1.2 horas ($\sigma=1.2$). Pruebe si la media real es diferente de 8 horas con $\alpha = 0.05$.
+        </p>
+        
+        <ol>
+          <li>
+            <p>Hipótesis</p>
+
+            <p>$$H_0: \mu = 8$$</p>
+            <p>$$H_1: \mu \ne 8 \quad \text{(Prueba Bilateral)}$$</p>
+          </li>
+
+          <li>
+            <p>Nivel de Significancia y Valor Crítico</p>
+            <p>$$\alpha = 0.05$$</p>
+            <p>$$Z_{\text{Crítico}} = \pm 1.96 \quad \text{(Para } \alpha/2 = 0.025 \text{ en cada cola)}$$</p>
+          </li>
+
+          <li>
+            <p>Calcular el Estadístico de Prueba (Zcalc)</p>
+            <p>$$Z_{\text{calc}} = \frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}} = \frac{7.5 - 8}{1.2/\sqrt{36}} = \frac{-0.5}{1.2/6} = \frac{-0.5}{0.2} = -2.5$$</p>
+          </li>
+
+          <li>
+            <p>Decisión</p>
+            <ul>
+              <li>Se compara $Z_{\text{calc}} = -2.5$ con los valores críticos de $\pm 1.96$.</li>
+              <li>Como $|-2.5| > 1.96$ o, dicho de otra forma, $-2.5$ cae en la Región de Rechazo (a la izquierda de $-1.96$).</li>
+              <li><strong>Decisión: Rechazar $H_0$</strong></li>
+            </ul>
+          </li>
+        </ol>
+        
+        <p><strong>Interpretación del Resultado</strong></p>
+        <p>Dado que el valor del estadístico de prueba cayó en la región de rechazo, existe suficiente evidencia estadística con un nivel de significancia del 5% para concluir que el promedio de horas trabajadas por los empleados es significativamente diferente de 8 horas diarias.</p>
+        
+        <br>
+        <hr class="mt-3">
+        
+        <h2>Confiabilidad</h2>
+
+        <p>La Confiabilidad se refiere al grado en que un instrumento de investigación produce resultados consistentes, estables y coherentes cuando se aplica repetidamente bajo condiciones similares</p>
+        <p>Su propósito es el de asegurar que las variaciones en las puntuaciones obtenidas reflejen diferencias verdaderas en la variable que se mide (la persona o el fenómeno) y no errores aleatorios de medición asociados al instrumento, a su aplicación o a la calificación. En términos sencillos, busca garantizar que el instrumento sea una medida precisa.</p>
+
+        <p><strong>Métodos de Estimación</strong></p>
+
+        <p>Existen varios métodos estadísticos para estimar la confiabilidad, cada uno enfocado en un tipo diferente de consistencia:</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Método de Estimación</th>
+              <th scope="col">Tipo de Consistencia Evaluada</th>
+              <th scope="col">Breve Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Test-Retest (Estabilidad)</th>
+              <td>Mide la estabilidad temporal.</td>
+              <td>Se aplica el mismo instrumento al mismo grupo de personas en dos momentos distintos. El coeficiente de confiabilidad es la correlación entre las dos series de puntuaciones.</td>
+            </tr>
+            <tr>
+              <th scope="row">Mitades Partidas (Split-Half)</th>
+              <td>Mide la consistencia interna entre ítems.</td>
+              <td>Se administra el instrumento una sola vez. Luego, se divide el total de ítems en dos mitades (ej. ítems pares e impares) y se correlacionan las puntuaciones de ambas mitades. Se utiliza una fórmula de corrección (como la de Spearman-Brown) para estimar la confiabilidad del instrumento completo.</td>
+            </tr>
+            <tr>
+              <th scope="row">Alfa de Cronbach ($\alpha$)</th>
+              <td>Mide la consistencia interna general.</td>
+              <td>Es el método más popular. Se aplica a instrumentos con escalas politómicas (ej. Likert) o sumatorias. Mide el promedio de las correlaciones entre todos los ítems posibles, indicando hasta qué punto miden el mismo constructo.</td>
+            </tr>
+            <tr>
+              <th scope="row">Fórmula de Kuder-Richardson ($KR-20, KR-21$)</th>
+              <td>Mide la consistencia interna (específica).</td>
+              <td>Es una alternativa al Alfa de Cronbach, utilizada exclusivamente para instrumentos con ítems de respuesta dicotómica (ej. Verdadero/Falso, Sí/No).</td>
+            </tr>
+          </tbody>
+        </table>
+
+          <p><strong>Rango de Interpretación de los Coeficientes</strong></p>
+          <p>Los coeficientes de confiabilidad son valores que oscilan entre 0 y 1. Cuanto más cerca esté el valor de 1, mayor es la confiabilidad del instrumento y menor es el error de medición.</p>
+          <table class="table">
+            <thead>
+              <th scope="col">Coeficiente (r)</th>
+              <th scope="col">Interpretación</th>
+              <th scope="col">Calidad del Instrumento</th>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">$r \ge 0.90$</th>
+                <td>Excelente</td>
+                <td>Generalmente requerido para pruebas estandarizadas de alto impacto (ej. diagnósticas).</td>
+              </tr>
+              <tr>
+                <th scope="row">$0.80 \le r < 0.90$</th>
+                <td>Buena</td>
+                <td>Aceptable para la mayoría de investigaciones y uso práctico.</td>
+              </tr>
+              <tr>
+                <th scope="row">$0.70 \le r < 0.80$</th>
+                <td>Aceptable</td>
+                <td>Puede usarse, pero se recomienda mejorar. Mínimo aceptable para investigación básica.</td>
+              </tr>
+              <tr>
+                <th scope="row">$r < 0.70$</th>
+                <td>Pobre</td>
+                <td>El instrumento no es consistente; los resultados deben manejarse con cautela o el instrumento debe ser revisado o descartado.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><strong>Aplicación Práctica: Ejemplo Breve</strong></p>
+          <p>Escenario: Un investigador desarrolla un cuestionario de 10 preguntas con escala Likert (1 a 5) para medir el "Estrés Laboral" en una empresa.</p>
+          <br>
+          <p>Evaluación de la Confiabilidad (Consistencia Interna):</p>
+          <ol>
+            <li>Recolección de Datos: El cuestionario se aplica a una muestra de 50 empleados.</li>
+            <li>Cálculo del Coeficiente: Se ingresan las 10 respuestas de cada empleado en un software estadístico y se solicita el cálculo del Alfa de Cronbach ($\alpha$).</li>
+            <li>
+              <p>Resultado e Interpretación:</p>
+              <ul>
+                <li>Resultado Obtenido: $\alpha = 0.85$</li>
+                <li>Conclusión Práctica: Dado que $\alpha$ es $0.85$ (que se encuentra en el rango de buena confiabilidad), el investigador puede concluir que los 10 ítems del cuestionario miden de forma consistente el constructo "Estrés Laboral" y que sus resultados son fiables para la investigación. Si el resultado hubiera sido $0.62$, indicaría que el instrumento no es coherente y necesita ser revisado o que los ítems no están midiendo la misma cosa</li>
+              </ul>
+            </li>
+          </ol>
+
+          <br>
+          <hr class="mt-3">
+
+          <h2>Conclusión</h2>
+
+          <p>La Prueba de Hipótesis y la Confiabilidad son dos pilares interconectados que sostienen la calidad y el rigor de toda investigación científica.</p>
+          <ol>
+            <li>
+              <p>La Confiabilidad Garantiza la Calidad de los Datos (Entrada):</p>
+              <p>Antes de analizar cualquier dato, la confiabilidad asegura que la información recolectada es consistente y estable . Un instrumento poco confiable produce "ruido" o error en la medición, lo que automáticamente hace que cualquier análisis posterior sea defectuoso.</p>
+            </li>
+            <li>
+              <p>La Prueba de Hipótesis Garantiza la Objetividad de la Conclusión (Salida):</p>
+              <p>Una vez que se tienen datos de alta calidad (confiables), la prueba de hipótesis proporciona el método objetivo para tomar decisiones sobre el fenómeno estudiado. Permite determinar, con un nivel de riesgo conocido (α), si los patrones observados en la muestra son reales o simplemente producto del azar. Esto transforma una mera observación en una inferencia científica válida.</p>
+            </li>
+          </ol>
+          
+          <p>En resumen, la confiabilidad asegura que estamos midiendo consistentemente, y la prueba de hipótesis asegura que nuestras conclusiones sobre esa medición son estadísticamente justificadas. Ambas son esenciales para pasar de una simple observación a un conocimiento científico robusto.</p>
+          <br>
+          <p>La estadística, a través de herramientas como la confiabilidad y la prueba de hipótesis, contribuye de manera crítica a la validez y credibilidad de los resultados de la siguiente manera:</p>
+          <ul>
+            <li>
+              <p>Asegura la Validez Interna (Veracidad de la Causa-Efecto):</p>
+              <p>Al utilizar la Prueba de Hipótesis, la estadística permite descartar explicaciones alternativas, principalmente la casualidad. Si un experimento muestra que el grupo de tratamiento mejoró significativamente, la estadística confirma que la diferencia es real y no aleatoria, fortaleciendo la creencia en la relación causa-efecto (validez interna).</p>
+            </li>
+            <li>
+              <p>Soporta la Validez Externa (Generalización):</p>
+              <p>La estadística inferencial permite a los investigadores extrapolar los hallazgos de una muestra (limitada) a una población (más grande) con un grado cuantificable de certeza. Esto es crucial para la validez externa y para que los resultados de una investigación sean aplicables y útiles más allá del contexto del estudio original.</p>
+            </li>
+            <li>
+              <p>Fomenta la Transparencia y Replicabilidad (Credibilidad):</p>
+              <p>Los procedimientos estadísticos son universales y estandarizados. Al reportar el nivel de significancia (α) y el valor p, los investigadores comunican exactamente el riesgo que están asumiendo. De igual forma, al reportar coeficientes de confiabilidad (α de Cronbach), demuestran la calidad de su medición. Este rigor metodológico y transparencia son la base para que la comunidad científica pueda replicar el estudio y, por ende, le otorgue credibilidad a los hallazgos.</p>
+            </li>
+            <li>
+              <p>Cuantifica la Incertidumbre:</p>
+              <p>A diferencia de las afirmaciones cualitativas, la estadística proporciona medidas precisas de la incertidumbre, como los intervalos de confianza. Esto evita la sobreinterpretación o las afirmaciones absolutas, manteniendo la honestidad intelectual y la prudencia científica.</p>
+            </li>
+          </ul>
+          
+          <p>La estadística, en última instancia, proporciona el lenguaje lógico y matemático necesario para convertir las observaciones empíricas en conclusiones científicas sólidas, creíbles y universalmente aceptadas.</p>
+        </section>
+
+        <footer class="mt-4">
+          <p class="text-muted small">© 2025 Adrian Rojas</p>
+        </footer>
+      </article>
+    </main>
+
+    <!-- Footer 
+    <footer class="bg-light text-center text-muted py-3">
+      <div class="container">
+        <small>Contacto: <a href="mailto:tu@correo.com" class="text-decoration-none">tu@correo.com</a></small>
+      </div>
+    </footer>-->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+      window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" integrity="" crossorigin="anonymous"></script>
+  </body>
+</html>
