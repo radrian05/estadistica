@@ -3,50 +3,111 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Blog — Matemática</title>
+    <title>Prueba de Hipótesis y Confiabilidad</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="themetoggle.js"></script>
+    <style> html { scroll-behavior: smooth; } </style>
   </head>
   <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-      <div class="container">
-        <a class="navbar-brand" href="#">Matemática</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegación">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="offcanvas offcanvas-start custom-sidebar" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+      data-bs-backdrop="true" data-bs-scroll="false">
+      <div class="offcanvas-header">
+        <h6 class="offcanvas-title d-block" id="offcanvasLabel">Menú</h6>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Acerca</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorías
+      <div class="offcanvas-body px-0">
+        <div class="accordion accordion-flush" id="indexAccordion">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-importancia">
+              <a class="accordion-button text-decoration-none collapsed" href="#importancia-prueba" role="button">
+                Importancia de la Prueba de Hipótesis
               </a>
-              <ul class="dropdown-menu" aria-labelledby="categoriasDropdown">
-                <li><a class="dropdown-item" href="#">Álgebra</a></li>
-                <li><a class="dropdown-item" href="#">Geometría</a></li>
-                <li><a class="dropdown-item" href="#">Cálculo</a></li>
-                <li><a class="dropdown-item" href="#">Teoría de Números</a></li>
-              </ul>
-            </li>
-          </ul>
+            </h2>
+          </div>
 
-          <form class="d-flex" role="search" onsubmit="event.preventDefault(); /* implementar búsqueda */">
-            <input class="form-control me-2" type="search" placeholder="Buscar en el blog" aria-label="Buscar">
-            <button class="btn btn-light" type="submit">Buscar</button>
-          </form>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-relevancia">
+              <a class="accordion-button text-decoration-none collapsed" href="#relevancia-confiabilidad" role="button">
+                Relevancia de la Confiabilidad
+              </a>
+            </h2>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-prueba">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-prueba" aria-expanded="false" aria-controls="collapse-prueba">
+                Prueba de Hipótesis
+              </button>
+            </h2>
+            <div id="collapse-prueba" class="accordion-collapse collapse" aria-labelledby="heading-prueba" data-bs-parent="#indexAccordion">
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><a href="#tipos-hipotesis" class="nav-link">Tipos de Hipótesis</a></li>
+                  <li><a href="#tipos-prueba" class="nav-link">Tipos de Prueba</a></li>
+                  <li><a href="#nivel-significancia" class="nav-link">Nivel de Significancia</a></li>
+                  <li><a href="#pasos-procedimiento" class="nav-link">Pasos del Procedimiento</a></li>
+                  <li><a href="#formulas" class="nav-link">Fórmulas Empleadas</a></li>
+                  <li><a href="#ejercicio-z" class="nav-link">Ejercicio Numérico (Prueba Z)</a></li>
+                  <li><a href="#calculadora-z" class="nav-link">Calculadora Z</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-confiabilidad">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-confiabilidad" aria-expanded="false" aria-controls="collapse-confiabilidad">
+                Confiabilidad
+              </button>
+            </h2>
+            <div id="collapse-confiabilidad" class="accordion-collapse collapse" aria-labelledby="heading-confiabilidad" data-bs-parent="#indexAccordion">
+              <div class="accordion-body">
+                <ul class="list-unstyled mb-0">
+                  <li><a href="#metodos-estimacion" class="nav-link">Métodos de Estimación</a></li>
+                  <li><a href="#rango-interpretacion" class="nav-link">Rango de Interpretación</a></li>
+                  <li><a href="#aplicacion-practica" class="nav-link">Aplicación Práctica</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-conclusion">
+              <a class="accordion-button text-decoration-none collapsed" href="#conclusion" role="button">
+                Conclusión
+              </a>
+            </h2>
+          </div>
+
         </div>
+      </div>
+    </div>
+
+    <nav class="navbar bg-body sticky-top navbar-expand-lg border-bottom"> 
+      <div class="container-fluid">
+        <button class="btn btn-light float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+          role="button" aria-label="Abrir menú lateral">
+          <i class="bi-list"></i><span class="ms-1 d-inline">Indice</span>
+        </button>
+        <a class="navbar-brand d-flex align-items-center" href="#">Matemática Aplicada</a>
+        <div class="form-check form-switch ms-3">
+              <input class="form-check-input" type="checkbox" id="darkModeSwitch" checked>
+              <label class="form-check-label" for="darkModeSwitch">
+                <i class="bi bi-moon"></i>
+              </label>
+            </div>
+        
       </div>
     </nav>
 
-    <!-- Contenido principal: página única del blog -->
     <main class="container my-5">
       <article class="mx-auto" style="max-width:900px;">
         <header class="mb-4">
           <h1 class="fw-bold">Prueba de Hipótesis y Confiabilidad</h1>
-          <p class="text-muted mb-0">Publicado el 20 de octubre de 2025 · <span class="badge bg-secondary">Cálculo</span></p>
+          <p class="text-muted mb-0">Publicado por Adrian Rojas · C.I 31.091.216
           <hr class="mt-3">
         </header>
 
@@ -59,7 +120,7 @@
           <p>Ambos conceptos son cruciales, ya que garantizan que las conclusiones científicas se basen en datos sólidos y análisis rigurosos.</p>
           <br>
 
-          <h2>Importancia de la Prueba de Hipótesis en la Toma de Decisiones Científicas</h2>
+          <h2 id="importancia-prueba">Importancia de la Prueba de Hipótesis en la Toma de Decisiones Científicas</h2>
           <p>La Prueba de Hipótesis es de vital importancia en la ciencia porque proporciona un marco objetivo y cuantitativo para evaluar teorías y afirmaciones, permitiendo a los investigadores:</p>
           <ul class="mb-3">
             <li>Validar o Refutar Teorías: Transforma una suposición o pregunta de investigación en un par de hipótesis estadísticas ($H_0$ y $H_1$) que pueden ser sometidas a pruebas empíricas rigurosas. Esto ayuda a avanzar el conocimiento científico al confirmar, modificar o refutar ideas iniciales.</li>
@@ -69,7 +130,7 @@
           </ul>
 
           <br>
-          <h2>Relevancia de la Confiabilidad en la Calidad de los Instrumentos de Investigación</h2>
+          <h2 id="relevancia-confiabilidad">Relevancia de la Confiabilidad en la Calidad de los Instrumentos de Investigación</h2>
           <p>La confiabilidad es la piedra angular de la calidad de cualquier estudio, ya que se refiere al grado en que un instrumento de investigación produce resultados consistentes y coherentes cada vez que se aplica bajo condiciones similares. Su relevancia se manifiesta en:</p>
           <ul class="mb-3">
             <li>Garantía de Consistencia (Replicabilidad): Un instrumento confiable asegura que la variación en los resultados se debe a cambios en la variable que se mide y no a fallas o inconsistencias del instrumento. Esto es fundamental para que otros investigadores puedan replicar el estudio y obtener conclusiones similares, un principio básico de la ciencia.</li>
@@ -82,13 +143,14 @@
           <br>
           <hr class="mt-3">
 
-          <h2>Prueba de Hipótesis</h2>
+          <h2 id="prueba-hipotesis">Prueba de Hipótesis</h2>
           <p>Es una herramienta estadística fundamental utilizada para tomar decisiones sobre un parámetro poblacional basándose en la información recolectada de una muestra.</p>
           <p>La Prueba de Hipótesis es un procedimiento estandarizado que utiliza datos muestrales para determinar si hay suficiente evidencia para rechazar una afirmación inicial (hipótesis nula) sobre una característica de la población (como la media o la proporción).</p>
           <ul>
             <li>En esencia: Es un proceso formal para verificar si una suposición sobre la población es razonable a la luz de lo que se observa en los datos de una muestra.</li>
           </ul>
-          <h4>Tipos de Hipótesis (Nula y Alternativa)</h4>
+
+          <p><strong id="tipos-hipotesis">Tipos de Hipótesis (Nula y Alternativa)</strong></p>
           <p>Toda prueba de hipótesis se formula con dos afirmaciones mutuamente excluyentes:</p>
           <table class="table">
             <thead>
@@ -111,21 +173,21 @@
                 </tr>
             </tbody>
         </table>
-        <p><strong>Tipos de Prueba (basados en $H_1$):</strong></p>
+        <p><strong id="tipos-prueba">Tipos de Prueba (basados en $H_1$):</strong></p>
         <ol>
             <li>Bilateral (Dos colas): $H_1: \mu \ne \mu_0$ (diferente de).</li>
             <li>Unilateral (Una cola a la derecha): $H_1: \mu > \mu_0$ (mayor que).</li>
             <li>Unilateral (Una cola a la izquierda): $H_1: \mu < \mu_0$ (menor que).</li>
         </ol>
 
-        <p><strong>Nivel de Significancia ($\alpha$) y Regiones de Rechazo</strong></p>
+        <p><strong id="nivel-significancia">Nivel de Significancia ($\alpha$) y Regiones de Rechazo</strong></p>
         <p>El Nivel de Significancia ($\alpha$), también llamado el tamaño del Error Tipo I, es la probabilidad máxima que un investigador está dispuesto a aceptar de cometer el error de rechazar la $H_0$ cuando en realidad es verdadera.</p>
         <ul>
             <li>$\alpha$ se establece antes de la prueba. Los valores más comunes son 0.05 (5%) o 0.01 (1%).</li>
             <li>Región de Rechazo (o Región Crítica): Es el área bajo la curva de la distribución muestral que contiene los valores del estadístico de prueba tan extremos (o más extremos) que, si caen allí, llevan a la decisión de rechazar la $H_0$. El tamaño de esta área es precisamente $\alpha$.</li>
         </ul>
 
-        <p> <strong>Pasos del Procedimiento con Ejemplos</strong></p>
+        <p> <strong id="pasos-procedimiento">Pasos del Procedimiento con Ejemplos</strong></p>
         <p>El procedimiento se sigue de manera sistemática:</p>
 
         <table class="table">
@@ -165,7 +227,7 @@
             </tbody>
         </table>
 
-        <p><strong>Fórmulas Empleadas</strong></p>
+        <p><strong id="formulas">Fórmulas Empleadas</strong></p>
         <p>Las fórmulas del estadístico de prueba (valor calculado) se basan en la Distribución Normal Estándar ($Z$) o la Distribución t de Student ($t$).</p>
         <table class="table">
           <thead>
@@ -199,7 +261,7 @@
           <li>$p_0$ = Proporción hipotética</li>
         </ul>
 
-        <p><strong>Breve Desarrollo de un Ejercicio Numérico (Prueba Z para la Media)</strong></p>
+        <p><strong id="ejercicio-z">Breve Desarrollo de un Ejercicio Numérico (Prueba Z para la Media)</strong></p>
         <p>
           <strong>Problema: </strong>Una empresa afirma que sus empleados trabajan en promedio 8 horas diarias ($\mu_0 = 8$). Una muestra aleatoria de 36 empleados ($n=36$) muestra una media de 7.5 horas ($\bar{x}=7.5$). Se sabe que la desviación estándar poblacional es de 1.2 horas ($\sigma=1.2$). Pruebe si la media real es diferente de 8 horas con $\alpha = 0.05$.
         </p>
@@ -235,16 +297,72 @@
         
         <p><strong>Interpretación del Resultado</strong></p>
         <p>Dado que el valor del estadístico de prueba cayó en la región de rechazo, existe suficiente evidencia estadística con un nivel de significancia del 5% para concluir que el promedio de horas trabajadas por los empleados es significativamente diferente de 8 horas diarias.</p>
+        <br>
+
+        <div class="card mb-4" id="calculadora-z">
+          <div class="card-header">
+            Calculadora interactiva — Prueba Z
+           </div>
+           <div class="card-body">
+            <form id="zForm" class="row g-3">
+               <div class="col-md-4">
+                 <label for="mu0" class="form-label">Media hipotética (μ₀)</label>
+                 <input type="number" step="any" class="form-control" id="mu0" placeholder="e.j. 8" required>
+               </div>
+              <div class="col-md-4">
+                <label for="xbar" class="form-label">Media muestral (x̄)</label>
+                <input type="number" step="any" class="form-control" id="xbar" placeholder="e.j. 7.5" required>
+               </div>
+              <div class="col-md-4">
+                <label for="sigma" class="form-label">Desviación estándar poblacional (σ)</label>
+                <input type="number" step="any" min="0" class="form-control" id="sigma" placeholder="e.j. 1.2" required>
+              </div>
         
+              <div class="col-md-4">
+                <label for="n" class="form-label">Tamaño de muestra (n)</label>
+                <input type="number" min="1" step="1" class="form-control" id="n" placeholder="e.j. 36" required>
+              </div>
+        
+              <div class="col-md-4">
+                <label for="alpha" class="form-label">Nivel de significancia (α)</label>
+                <select id="alpha" class="form-select">
+                  <option value="0.01">0.01</option>
+                  <option value="0.05" selected>0.05</option>
+                  <option value="0.10">0.10</option>
+                </select>
+              </div>
+          
+              <div class="col-md-4">
+                <label for="testType" class="form-label">Tipo de prueba</label>
+                <select id="testType" class="form-select">
+                  <option value="two">Bilateral (dos colas)</option>
+                  <option value="right">Unilateral — derecha</option>
+                  <option value="left">Unilateral — izquierda</option>
+                </select>
+              </div>
+          
+              <div class="col-12 d-flex gap-2">
+                <button type="submit" class="btn btn-primary" id="calcBtn">Calcular</button>
+                <button type="button" class="btn btn-secondary" id="resetBtn">Limpiar</button>
+              </div>
+            </form>
+          
+            <hr>
+          
+            <div id="zResult" aria-live="polite">
+            </div>            
+          </div>
+        </div>
+
         <br>
         <hr class="mt-3">
         
-        <h2>Confiabilidad</h2>
+        <h2 id="confiabilidad">Confiabilidad</h2>
 
         <p>La Confiabilidad se refiere al grado en que un instrumento de investigación produce resultados consistentes, estables y coherentes cuando se aplica repetidamente bajo condiciones similares</p>
         <p>Su propósito es el de asegurar que las variaciones en las puntuaciones obtenidas reflejen diferencias verdaderas en la variable que se mide (la persona o el fenómeno) y no errores aleatorios de medición asociados al instrumento, a su aplicación o a la calificación. En términos sencillos, busca garantizar que el instrumento sea una medida precisa.</p>
 
-        <p><strong>Métodos de Estimación</strong></p>
+        <p><strong id="metodos-estimacion">Métodos de Estimación</strong></p>
 
         <p>Existen varios métodos estadísticos para estimar la confiabilidad, cada uno enfocado en un tipo diferente de consistencia:</p>
 
@@ -280,7 +398,7 @@
           </tbody>
         </table>
 
-          <p><strong>Rango de Interpretación de los Coeficientes</strong></p>
+          <p><strong id="rango-interpretacion">Rango de Interpretación de los Coeficientes</strong></p>
           <p>Los coeficientes de confiabilidad son valores que oscilan entre 0 y 1. Cuanto más cerca esté el valor de 1, mayor es la confiabilidad del instrumento y menor es el error de medición.</p>
           <table class="table">
             <thead>
@@ -312,7 +430,7 @@
             </tbody>
           </table>
 
-          <p><strong>Aplicación Práctica: Ejemplo Breve</strong></p>
+          <p><strong id="aplicacion-practica">Aplicación Práctica: Ejemplo Breve</strong></p>
           <p>Escenario: Un investigador desarrolla un cuestionario de 10 preguntas con escala Likert (1 a 5) para medir el "Estrés Laboral" en una empresa.</p>
           <br>
           <p>Evaluación de la Confiabilidad (Consistencia Interna):</p>
@@ -331,7 +449,7 @@
           <br>
           <hr class="mt-3">
 
-          <h2>Conclusión</h2>
+          <h2 id="conclusion">Conclusión</h2>
 
           <p>La Prueba de Hipótesis y la Confiabilidad son dos pilares interconectados que sostienen la calidad y el rigor de toda investigación científica.</p>
           <ol>
@@ -376,15 +494,9 @@
       </article>
     </main>
 
-    <!-- Footer 
-    <footer class="bg-light text-center text-muted py-3">
-      <div class="container">
-        <small>Contacto: <a href="mailto:tu@correo.com" class="text-decoration-none">tu@correo.com</a></small>
-      </div>
-    </footer>-->
-
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="zcalculator.js"></script>
+
     <script>
       window.MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
